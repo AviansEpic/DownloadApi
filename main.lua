@@ -1,7 +1,7 @@
 local api = {}
 
 function api:DownloadFromUrl(filetosave, url)
-  writefile(filetosave, game:HttpGet((url), true))
+  writefile(filetosave, game:HttpGet(url))
 end
 
 function api:CreateFileIfDoesntExist(name, contents)
