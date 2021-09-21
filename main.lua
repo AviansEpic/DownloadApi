@@ -12,4 +12,11 @@ function api:CreateFileIfDoesntExist(name, contents)
   return false
 end
 
+function api:Cut(file, newfilename)
+  local contents = readfile(file)
+  delfile(file)
+  
+  writefile(newfilename, contents)
+end
+
 return api
